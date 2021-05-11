@@ -15,18 +15,18 @@ Radarr - movie management - port 7878
 **Install:**
 Get docker / docker compose
 
-  curl -fsSL https://get.docker.com -o get-docker.sh
-  sh get-docker.sh
-  sudo apt-get install python3-pip
-  sudo pip3 install docker-compose
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sh get-docker.sh
+    sudo apt-get install python3-pip
+    sudo pip3 install docker-compose
 
 clone this repo and start! oh baby!
 
 ***Docker compose reference:***
 
-  Start: docker-compose up --force-recreate -d
-  Update: docker-compose pull
-  Stop: docker-compose down --remove-orphans || true
+    Start: docker-compose up --force-recreate -d
+    Update: docker-compose pull
+    Stop: docker-compose down --remove-orphans || true
 
 **Pi-Hole**
 
