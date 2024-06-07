@@ -72,22 +72,23 @@ Quick setup of pi. v2.x
    sudo ufw enable
    ```
 
-**Docker Compose commands:**
+**Docker Compose Usage:**
 
-Start:
-```bash
-docker-compose up --force-recreate -d
-```
+1. **Start the services:**
+   ```bash
+   docker compose up -d --force-recreate
+   ```
 
-Update:
-```bash
-docker-compose pull
-```
+2. **Update the services:**
+   ```bash
+   docker compose pull
+   docker compose up -d --force-recreate
+   ```
 
-Stop:
-```bash
-docker-compose down --remove-orphans || true
-```
+3. **Stop the services:**
+   ```bash
+   docker compose down --remove-orphans
+   ```
 
 **Pi-Hole**
 
