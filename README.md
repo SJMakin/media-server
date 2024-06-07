@@ -33,7 +33,7 @@ Quick setup of pi. v2.x
    
    Edit `/etc/fstab` to include:
    ```bash
-   UUID=<UUID of the drive> /mnt/usbdrive ext4 defaults,nofail 0 2
+   UUID=0E340C47340C33ED /mnt ntfs-3g defaults,nofail 0 2
    ```
    Then mount the drive:
    ```bash
