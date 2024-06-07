@@ -16,7 +16,7 @@ Quick setup of pi. v2.x
 
 2. **Clone repository and set up Docker compose file**
    ```bash
-   git clone <your-repo-url> /opt/media-server
+   git clone git@github.com:SJMakin/media-server.git /opt/media-server
    cd /opt/media-server
    chmod +x docker-compose.yml
    ```
