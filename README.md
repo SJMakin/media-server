@@ -1,6 +1,6 @@
 # media-server
 
-Quick setup of pi. v2.0
+Quick setup of pi. v2.x
 
 **Stack:**
 
@@ -23,6 +23,14 @@ Quick setup of pi. v2.0
    It is a best practice to place Docker Compose files in `/opt`.
 
 3. **Mount external USB hard drive**
+
+   Find the UUID of the drive using the following command:
+
+   ```bash
+   lsblk -o NAME,UUID
+   ```
+   Look for your external USB hard drive in the output and note the corresponding UUID.
+   
    Edit `/etc/fstab` to include:
    ```bash
    UUID=<UUID of the drive> /mnt/usbdrive ext4 defaults,nofail 0 2
@@ -32,7 +40,7 @@ Quick setup of pi. v2.0
    sudo mount -a
    ```
 
-4. **Install Samba**
+5. **Install Samba**
    ```bash
    sudo apt update
    sudo apt install samba
@@ -54,7 +62,7 @@ Quick setup of pi. v2.0
    sudo systemctl restart smbd
    ```
 
-5. **Firewall configuration**
+6. **Firewall configuration**
    ```bash
    sudo ufw allow OpenSSH
    sudo ufw allow 8112/tcp
