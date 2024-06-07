@@ -40,24 +40,42 @@ Quick setup of pi. v2.x
    sudo mount -a
    ```
 
-5. **Install Samba**
+5. **Install Samba and configure shared folder**
+   a. Install Samba:
    ```bash
    sudo apt update
    sudo apt install samba
+   ```
+   
+   b. Edit `/etc/samba/smb.conf`:
+   ```bash
    sudo nano /etc/samba/smb.conf
    ```
+   
    Add the following to the end of the `smb.conf` file:
-   ```bash
+   ```ini
    [media]
-   path = /mnt/usbdrive
+   path = /mnt
    available = yes
-   valid users = <your-username>
+   valid users = pi
    read only = no
    browsable = yes
    public = yes
    writable = yes
    ```
-   Restart Samba:
+
+   c. Create the system user (if not already existing):
+   ```bash
+   sudo adduser pi
+   ```
+
+   d. Set a Samba password for the user:
+   ```bash
+   sudo smbpasswd -a pi
+   sudo smbpasswd -e pi
+   ```
+
+   e. Restart Samba:
    ```bash
    sudo systemctl restart smbd
    ```
