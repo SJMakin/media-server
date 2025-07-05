@@ -1,0 +1,11 @@
+# Ignore transient and sensitive files
+magnets.txt
+*.log
+*.tmp
+*.bak
+.env
+# VSCode settings
+.vscode/
+# OS files
+.DS_Store
+Thumbs.db
